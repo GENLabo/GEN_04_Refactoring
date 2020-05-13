@@ -17,4 +17,20 @@ public class Orders {
     public Order getOrder(int i) {
         return orders.get(i);
     }
+
+    @Override
+    public String toString() {
+        String res = "{\"orders\": [";
+        for (int i = 0; i < getOrdersCount(); i++) {
+            res += getOrder(i);
+        }
+
+        if (getOrdersCount() > 0) {
+            res = res.substring(0, res.length()-2);
+        }
+
+        res += "]}";
+
+        return res;
+    }
 }
