@@ -1,13 +1,15 @@
 package ch.heigvd.gen2019;
 
+import ch.heigvd.gen2019.colors.Color;
+
 public class Product {
     private String code;
-    private int color;
+    private Color color;
     private Size size;
     private double price;
     private String currency;
 
-    public Product(String code, int color, Size size, double price, String currency) {
+    public Product(String code, Color color, Size size, double price, String currency) {
         this.code = code;
         this.color = color;
         this.size = size;
@@ -19,7 +21,7 @@ public class Product {
         return code;
     }
 
-    public int getColor() {
+    public Color getColor() {
         return color;
     }
 
@@ -35,26 +37,13 @@ public class Product {
         return currency;
     }
 
-    String getColorFor() {
-        switch (getColor()) {
-            case 1:
-                return "blue";
-            case 2:
-                return "red";
-            case 3:
-                return "yellow";
-            default:
-                return "no color";
-        }
-    }
-
     void extractProductContents(StringBuffer sb) {
         sb.append("{");
         sb.append("\"code\": \"");
         sb.append(getCode());
         sb.append("\", ");
         sb.append("\"color\": \"");
-        sb.append(getColorFor());
+        sb.append(color);
         sb.append("\", ");
 
         if (getSize() != Size.NO_SIZE) {
