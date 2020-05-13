@@ -37,26 +37,31 @@ public class Product {
         return currency;
     }
 
-    void extractProductContents(StringBuffer sb) {
-        sb.append("{");
-        sb.append("\"code\": \"");
-        sb.append(getCode());
-        sb.append("\", ");
-        sb.append("\"color\": \"");
-        sb.append(color);
-        sb.append("\", ");
+    @Override
+    public String toString() {
+        String res = "";
+
+        res += "{";
+        res += "\"code\": \"";
+        res += getCode();
+        res += "\", ";
+        res += "\"color\": \"";
+        res += color;
+        res += "\", ";
 
         if (getSize() != Size.NO_SIZE) {
-            sb.append("\"size\": \"");
-            sb.append(size);
-            sb.append("\", ");
+            res += "\"size\": \"";
+            res += size;
+            res += "\", ";
         }
 
-        sb.append("\"price\": ");
-        sb.append(getPrice());
-        sb.append(", ");
-        sb.append("\"currency\": \"");
-        sb.append(getCurrency());
-        sb.append("\"}, ");
+        res += "\"price\": ";
+        res += getPrice();
+        res += ", ";
+        res += "\"currency\": \"";
+        res += getCurrency();
+        res += "\"}, ";
+
+        return res;
     }
 }
