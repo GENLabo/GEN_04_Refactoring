@@ -15,6 +15,7 @@ public class Product {
         this.size = size;
         this.price = price;
         this.currency = currency;
+
     }
 
     public String getCode() {
@@ -37,26 +38,4 @@ public class Product {
         return currency;
     }
 
-    void extractProductContents(StringBuffer sb) {
-        sb.append("{");
-        sb.append("\"code\": \"");
-        sb.append(getCode());
-        sb.append("\", ");
-        sb.append("\"color\": \"");
-        sb.append(color);
-        sb.append("\", ");
-
-        if (getSize() != Size.NO_SIZE) {
-            sb.append("\"size\": \"");
-            sb.append(size);
-            sb.append("\", ");
-        }
-
-        sb.append("\"price\": ");
-        sb.append(getPrice());
-        sb.append(", ");
-        sb.append("\"currency\": \"");
-        sb.append(getCurrency());
-        sb.append("\"}, ");
-    }
 }
