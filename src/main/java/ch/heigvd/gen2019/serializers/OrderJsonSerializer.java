@@ -1,9 +1,11 @@
 package ch.heigvd.gen2019.serializers;
 
 import ch.heigvd.gen2019.Order;
-import ch.heigvd.gen2019.Orders;
 import ch.heigvd.gen2019.ProductWriter;
 
+/**
+ * JSON serializer for Order object
+ */
 public class OrderJsonSerializer extends OrderSerializer {
 
     public String toParse(Order order){
