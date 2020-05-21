@@ -3,6 +3,9 @@ package ch.heigvd.gen2019.serializers;
 import ch.heigvd.gen2019.Product;
 import ch.heigvd.gen2019.Size;
 
+/**
+ * JSON serializer for Product object
+ */
 public class ProductJsonSerializer extends ProductSerializer {
 
     public String toParse(Product product){

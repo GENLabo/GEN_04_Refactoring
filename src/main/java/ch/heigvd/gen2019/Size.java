@@ -11,6 +11,7 @@ public enum Size {
 
     private final String text;
 
+    // Constructor is implicitly private for Enum class
     Size(String text) {
         this.text = text;
     }
