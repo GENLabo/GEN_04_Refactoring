@@ -2,7 +2,7 @@ package ch.heigvd.gen2019;
 
 import ch.heigvd.gen2019.serializers.ProductSerializer;
 
-public class ProductWriter {
+public class ProductWriter implements Contentable{
     private Product product;
     private ProductSerializer productSerializer;
 
@@ -11,6 +11,7 @@ public class ProductWriter {
         this.productSerializer = serializer;
     }
 
+    @Override
     public String getContents() {
         return productSerializer.toParse(product);
     }

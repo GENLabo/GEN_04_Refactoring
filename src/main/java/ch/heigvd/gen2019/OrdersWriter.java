@@ -2,7 +2,7 @@ package ch.heigvd.gen2019;
 
 import ch.heigvd.gen2019.serializers.OrdersSerializer;
 
-public class OrdersWriter {
+public class OrdersWriter implements Contentable {
     private Orders orders;
     private OrdersSerializer ordersSerializer;
 
@@ -10,7 +10,8 @@ public class OrdersWriter {
         this.orders = orders;
         this.ordersSerializer = ordersSerializer;
     }
-
+    
+    @Override
     public String getContents() {
         return ordersSerializer.toParse(orders);
     }
