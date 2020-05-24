@@ -11,11 +11,18 @@ public enum Size {
 
     private final String text;
 
-    // Constructor is implicitly private for Enum class
+    /**
+     * Implicitly private constructor used to define the Size instances above
+     * @param text Size's label
+     */
     Size(String text) {
         this.text = text;
     }
 
+    /**
+     * The display test of the Size
+     * @return text of the Size
+     */
     @Override
     public String toString() {
         return text;

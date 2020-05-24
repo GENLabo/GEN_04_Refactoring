@@ -8,6 +8,11 @@ import ch.heigvd.gen2019.ProductWriter;
  */
 public class OrderJsonSerializer extends OrderSerializer {
 
+    /**
+     * Parses a given Order to JSON String format
+     * @param order Order to parse
+     * @return JSON formatted String
+     */
     public String toParse(Order order){
         StringBuffer sb = new StringBuffer();
         sb.append("{");
