@@ -8,6 +8,11 @@ import ch.heigvd.gen2019.Size;
  */
 public class ProductJsonSerializer extends ProductSerializer {
 
+    /**
+     * Parses a given Product to JSON String format
+     * @param product Product to parse
+     * @return JSON formatted String
+     */
     public String toParse(Product product){
         StringBuffer sb = new StringBuffer();
         sb.append("{");

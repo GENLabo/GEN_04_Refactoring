@@ -8,6 +8,11 @@ import ch.heigvd.gen2019.Orders;
  */
 public class OrdersJsonSerializer extends OrdersSerializer {
 
+    /**
+     * Parses a given Orders object to JSON String format
+     * @param orders Product to parse
+     * @return JSON formatted String
+     */
     public String toParse(Orders orders){
         StringBuffer sb = new StringBuffer("{\"orders\": [");
 
