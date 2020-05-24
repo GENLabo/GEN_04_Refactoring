@@ -1,5 +1,10 @@
 # Labo 04 Refactoring
 
+Auteurs : 
+- Loïc Dessaules
+- Robin Demarta
+- Vitor Vaz Afonso
+
 ## Points importants
 
 ### Size et Color
@@ -14,14 +19,14 @@ Ainsi, elle est très simple d'utilisation et nécessite aucune création multip
 principe élégant et simple utilisant le polymorphisme et la liaison dynamique pour afficher une couleur.
 
 Les deux méthodes fonctionnent correctement et nous ne trouvons pas qu'une des deux est bien meilleure que
-l'autre, c'est pourquoi nous avons décider de vous les montrer les deux. 
+l'autre, c'est pourquoi nous avons décidé de vous les montrer les deux. 
 
 ### Ajout d'un nouveau type de sérialisation
 Actuellement le programme utilise une sérialisation des objets sous format JSON. Nous avons mis en place
 un systeme de sérialisation qui permet de facilement étendre notre solution à d'autre format.
 Prenons l'exemple du XML, il suffirait de créer les fichiers : OrdersXMLSerializer, OrderXMLSerializer et
-ProductXMLSerializer. Ces 3 fichiers étenderont leurs classe mère respectives : OrdersSerializer et 
-ProductSerializer.
+ProductXMLSerializer. Ces 3 fichiers étenderont leurs classe mère respectives : OrdersSerializer, 
+OrderSerializer et ProductSerializer.
 
 Chacun de nos ...XMLSerializer vont devoir redéfinir la méthode toParse() et c'est dans son corps qu'il 
 faudra écrire le code XML spécifique à l'affichage de l'objet courant.
